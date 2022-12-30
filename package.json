@@ -64,7 +64,7 @@
     "lint:fix": "eslint --fix --cache --ext .ts .",
     "prerelease": "npm run build && npm run lint && npm run test",
     "test": "npm run test:xunit && npm run test:spec",
-    "test:xunit": "mocha --require source-map-support/register --reporter xunit --ui tdd out/test/**/*.js",
+    "test:xunit": "mocha --require source-map-support/register --reporter xunit --reporter-option output=tests.xml --ui tdd out/test/**/*.js",
     "test:spec": "mocha --require source-map-support/register --ui tdd out/test/**/*.js",
     "watch:docs": "onchange 'src/**/*.ts' 'test/**/*.ts' 'bin/**/*.ts' -- npm run docs",
     "watch:ts": "tsc -w -p ./",
